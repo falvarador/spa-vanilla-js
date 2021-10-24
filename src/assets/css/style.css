@@ -46,6 +46,13 @@ a:hover {
   padding: 0.25rem;
 }
 
+.grid-fluid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 1rem auto;
+  max-width: 90%;
+}
+
 h1 {
   text-align: center;
 }
@@ -72,4 +79,16 @@ img {
   height: 4rem;
   margin: 1rem auto;
   width: 4rem;
+}
+
+.post-card {
+  background-color: #eceff1;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 80%;
+}
+
+.post-card p {
+  display: flex;
+  justify-content: space-between;
 }
