@@ -1,5 +1,6 @@
+import { HideLoader } from "../components/commons/Loader.js";
+
 export default async function ajax(props) {
-  const d = document;
   const { url, method, headers, success } = props;
 
   try {
@@ -18,10 +19,12 @@ export default async function ajax(props) {
     const json = await response.json();
     success(json);
   } catch (err) {
-    d.getElementById("root").innerHTML = `
+    document.getElementById("posts").innerHTML = `
       <div class="error">
         <p>A ${err.status} error has occurred. ${err.statusText}</p>
       </div>
     `;
+
+    HideLoader();
   }
 }
