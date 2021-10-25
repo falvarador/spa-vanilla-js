@@ -3,8 +3,7 @@ import SearchForm from "./SearchForm.js";
 import Title from "./Title.js";
 
 export default function Header() {
-  const d = document;
-  const $header = d.createElement("header");
+  const $header = document.createElement("header");
 
   $header.classList.add("header");
 

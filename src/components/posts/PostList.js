@@ -1,6 +1,5 @@
 export default function PostList() {
-  const d = document;
-  const $posts = d.createElement("section");
+  const $posts = document.createElement("section");
 
   $posts.id = "posts";
   $posts.classList.add("grid-fluid");

@@ -12,6 +12,7 @@
     "object-curly-newline": "off",
     "no-throw-literal": "off",
     "quotes": "off",
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "no-unused-vars": "off"
   }
 }
