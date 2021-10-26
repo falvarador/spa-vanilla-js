@@ -1,13 +1,13 @@
 export default function SearchForm() {
-  const $form = document.createElement("form");
+  const $searchForm = document.createElement("form");
   const $input = document.createElement("input");
 
   $input.name = "search";
   $input.type = "search";
   $input.placeholder = "Search...";
 
-  $form.classList.add("form-search");
-  $form.appendChild($input);
+  $searchForm.classList.add("search-form");
+  $searchForm.appendChild($input);
 
-  return $form;
+  return $searchForm;
 }
