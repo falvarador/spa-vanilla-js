@@ -5,7 +5,7 @@ import PostContent from "./PostContent.js";
 
 export default async function Post() {
   await ajax({
-    url: `${wpApi.POST}/${localStorage.getItem("wpPostId")}`,
+    url: `${wpApi.POST}/${localStorage.getItem(wpApi.WP_POST_ID)}`,
     success: (post) => {
       PostContent(post);
     },

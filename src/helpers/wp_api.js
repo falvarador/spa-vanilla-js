@@ -6,6 +6,9 @@ const POSTS = `${API_WP}/posts?_embed`;
 const POST = `${API_WP}/posts`;
 const SEARCH = `${API_WP}/search?_embed&search=`;
 
+const WP_POST_ID = "wpPostId";
+const WP_SEARCH = "wpSearch";
+
 export default {
   NAME,
   DOMAIN,
@@ -14,4 +17,6 @@ export default {
   POSTS,
   POST,
   SEARCH,
+  WP_POST_ID,
+  WP_SEARCH,
 };
