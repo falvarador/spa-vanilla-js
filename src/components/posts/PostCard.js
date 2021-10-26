@@ -1,17 +1,17 @@
+import wpApi from "../../helpers/wp_api.js";
+
 export default function PostCard(props) {
   const { date, id, slug, title, _embedded } = props;
 
-  const dateFormat = new Date(date).toLocaleString();
+  const dateFormat = new Date(date).toLocaleDateString();
   const imagePost = _embedded["wp:featuredmedia"]
     ? _embedded["wp:featuredmedia"][0].source_url
-    : "app/assets/img/emphty.jpg";
+    : "assets/img/emphty.jpg";
 
   document.addEventListener("click", (e) => {
     if (!e.target.matches(".post-card a")) return false;
 
-    localStorage.setItem("wpPostId", e.target.dataset.id);
-
-    return true;
+    return localStorage.setItem(wpApi.WP_POST_ID, e.target.dataset.id);
   });
 
   return `

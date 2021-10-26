@@ -2,8 +2,10 @@
 
 import { HideLoader } from "./commons/Loader.js";
 import { MainTag } from "./Main.js";
+
 import Post from "./posts/Post.js";
 import Posts from "./posts/Posts.js";
+import SearchPost from "./posts/SearchPost.js";
 
 export default async function Router() {
   const { hash } = location;
@@ -12,7 +14,7 @@ export default async function Router() {
   if (!hash || hash === "#/") {
     await Posts();
   } else if (hash.includes("#/search")) {
-    $main.innerHTML = "<h2>Sección de búsqueda</h2>";
+    await SearchPost();
   } else if (hash === "#/contact") {
     $main.innerHTML = "<h2>Sección de contacto</h2>";
   } else {

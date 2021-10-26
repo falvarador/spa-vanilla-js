@@ -5,8 +5,6 @@ import { MainTag } from "../Main.js";
 import PostCard from "./PostCard.js";
 
 export default async function Posts() {
-  const $main = MainTag();
-
   await ajax({
     url: wpApi.POSTS,
     success: (posts) => {
@@ -14,9 +12,9 @@ export default async function Posts() {
 
       posts.forEach((post) => {
         html += PostCard(post);
-
-        $main.innerHTML = html;
       });
+
+      MainTag().innerHTML = html;
     },
   });
 }

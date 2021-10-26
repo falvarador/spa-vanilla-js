@@ -25,12 +25,12 @@ a:hover {
 }
 
 .error {
-  padding: 1rem;
+  background-color: #dc3545;
+  color: #f0f1f3;
   font-size: 150%;
   font-weight: bold;
+  padding: 1rem;
   text-align: center;
-  color: #f0f1f3;
-  background-color: #dc3545;
 }
 
 .form-search {
@@ -58,11 +58,11 @@ h1 {
 }
 
 .header {
+  background-color: #f0f1f3;
   padding: 0.5rem;
   position: sticky;
-  top: 0;
   text-align: center;
-  background-color: #f0f1f3;
+  top: 0;
 }
 
 .header > * {
@@ -74,6 +74,24 @@ img {
   height: auto;
 }
 
+.info {
+  background-color: #dcb835;
+  color: black;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+}
+
+.info mark {
+  background-color: #01579b;
+  border-radius: 0.5rem;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem;
+  text-decoration: underline;
+}
+
 .loader {
   display: block;
   height: 4rem;
@@ -81,7 +99,8 @@ img {
   width: 4rem;
 }
 
-.post-card {
+.post-card,
+.search-card {
   background-color: #eceff1;
   margin: 1rem auto;
   padding: 1rem;
@@ -91,6 +110,11 @@ img {
 .post-card p {
   display: flex;
   justify-content: space-between;
+}
+
+.post-card img {
+  width: 100%;
+  height: auto;
 }
 
 .post-page {
@@ -125,4 +149,8 @@ img {
   display: block;
   margin: auto;
   max-width: 100%;
+}
+.search-card img {
+  max-width: 10%;
+  height: auto;
 }
