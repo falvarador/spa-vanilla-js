@@ -1,4 +1,5 @@
 import { HideLoader } from "../components/commons/Loader.js";
+import { MainTag } from "../components/Main.js";
 
 export default async function ajax(props) {
   const { url, method, headers, success } = props;
@@ -19,7 +20,7 @@ export default async function ajax(props) {
     const json = await response.json();
     success(json);
   } catch (err) {
-    document.getElementById("posts").innerHTML = `
+    MainTag().innerHTML = `
       <div class="error">
         <p>A ${err.status} error has occurred. ${err.statusText}</p>
       </div>
